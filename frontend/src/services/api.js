@@ -43,4 +43,24 @@ export const sendMessage = async (messageData) => {
   return response.data;
 };
 
+export const getMe = async () => {
+  const response = await api.get('/auth/me');
+  return response.data;
+};
+
+export const checkCustomId = async (customId) => {
+  const response = await api.get(`/profile/check-id/${encodeURIComponent(customId)}`);
+  return response.data;
+};
+
+export const setupProfile = async (profileData) => {
+  const response = await api.post('/profile/setup', profileData);
+  return response.data;
+};
+
+export const updateProfile = async (profileData) => {
+  const response = await api.put('/profile/update', profileData);
+  return response.data;
+};
+
 export default api;

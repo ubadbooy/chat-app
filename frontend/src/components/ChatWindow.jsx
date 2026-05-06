@@ -34,8 +34,8 @@ export default function ChatWindow({ socket, user }) {
     }
   };
 
-  const chatTitle = currentChatUser?.username || 'Private chat';
-  const chatSubtitle = currentChatUser?.status || `ID: ${currentChat}`;
+  const chatTitle = currentChatUser?.displayName || currentChatUser?.username || 'Private chat';
+  const chatSubtitle = currentChatUser?.customId ? `@${currentChatUser.customId}` : (currentChatUser?.status || `ID: ${currentChat}`);
   const chatInitial = chatTitle?.trim()?.charAt(0)?.toUpperCase() || '?';
 
   if (!currentChat) {

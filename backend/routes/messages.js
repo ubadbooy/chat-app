@@ -18,6 +18,34 @@ router.get('/users', auth, async (req, res) => {
   }
 });
 
+// جستجوی کاربران با customId یا username
+router.get('/search', auth, async (req, res) => {
+  try {
+    const { query } = req.query;
+    
+    if (!query || query.trim().length < 2) {
+      return res.json([]);
+    }
+
+    const searchQuery = query.trim().toLowerCase();
+    const users = await User.find({
+      _id: { $ne: req.userId },
+      $or: [
+        { customId: { $regex: searchQuery, $options: 'i' } },
+        { username: { $regex: searchQuery, $options: 'i' } },
+        { displayName: { $regex: searchQuery, $options: 'i' } }
+      ]
+    })
+      .select('-password -email')
+      .limit(20);
+
+    res.json(users);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'خطای سرور' });
+  }
+});
+
 // دریافت پیام‌های یک مکالمه
 router.get('/conversation/:userId', auth, async (req, res) => {
   try {

@@ -2,11 +2,29 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
 const userSchema = new mongoose.Schema({
+  customId: {
+    type: String,
+    unique: true,
+    sparse: true,
+    trim: true,
+    lowercase: true,
+    minlength: 3,
+    maxlength: 30,
+    match: /^[a-z0-9_]+$/
+  },
   username: {
     type: String,
     required: true,
-    unique: true,
     trim: true
+  },
+  displayName: {
+    type: String,
+    trim: true
+  },
+  bio: {
+    type: String,
+    maxlength: 200,
+    default: ''
   },
   email: {
     type: String,
@@ -23,6 +41,10 @@ const userSchema = new mongoose.Schema({
   avatar: {
     type: String,
     default: 'https://ui-avatars.com/api/?background=random&name='
+  },
+  profileCompleted: {
+    type: Boolean,
+    default: false
   },
   status: {
     type: String,

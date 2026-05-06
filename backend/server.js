@@ -6,6 +6,7 @@ const cors = require('cors');
 const connectDB = require('./config/db');
 const authRoutes = require('./routes/auth');
 const messageRoutes = require('./routes/messages');
+const profileRoutes = require('./routes/profile');
 const socketHandler = require('./socket/socketHandler');
 require('dotenv').config();
 
@@ -38,6 +39,7 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/messages', messageRoutes);
+app.use('/api/profile', profileRoutes);
 
 // Socket.io
 socketHandler(io);

@@ -2,8 +2,9 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Register from './pages/Register';
 import Login from './pages/Login';
+import ProfileSetup from './pages/ProfileSetup';
 import Chat from './pages/Chat';
-import { useAuthStore } from './store/authStore';
+import { useAuthStore } from './store/useAuthStore';
 
 function App() {
   const user = useAuthStore((state) => state.user);
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/register" element={!user ? <Register /> : <Navigate to="/chat" />} />
         <Route path="/login" element={!user ? <Login /> : <Navigate to="/chat" />} />
+        <Route path="/profile-setup" element={user ? <ProfileSetup /> : <Navigate to="/login" />} />
         <Route path="/chat" element={user ? <Chat /> : <Navigate to="/login" />} />
         <Route path="/" element={<Navigate to={user ? "/chat" : "/register"} />} />
       </Routes>

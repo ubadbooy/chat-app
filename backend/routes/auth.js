@@ -18,7 +18,7 @@ router.post('/register', async (req, res) => {
     }
 
     // بررسی وجود کاربر
-    let user = await User.findOne({ $or: [{ email }, { username }] });
+    let user = await User.findOne({ email });
     if (user) {
       return res.status(400).json({ message: 'کاربر قبلاً ثبت‌نام کرده است' });
     }
@@ -36,9 +36,13 @@ router.post('/register', async (req, res) => {
       token,
       user: {
         id: user._id,
+        customId: user.customId,
         username: user.username,
+        displayName: user.displayName,
         email: user.email,
-        avatar: user.avatar
+        avatar: user.avatar,
+        bio: user.bio,
+        profileCompleted: user.profileCompleted
       }
     });
   } catch (error) {
@@ -77,9 +81,13 @@ router.post('/login', async (req, res) => {
       token,
       user: {
         id: user._id,
+        customId: user.customId,
         username: user.username,
+        displayName: user.displayName,
         email: user.email,
-        avatar: user.avatar
+        avatar: user.avatar,
+        bio: user.bio,
+        profileCompleted: user.profileCompleted
       }
     });
   } catch (error) {
