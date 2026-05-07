@@ -1,0 +1,88 @@
+{
+  "users": [
+    {
+      "id": "17f7ab46-9709-4b4d-b5f6-d2aef0c087c1",
+      "name": "barbod",
+      "email": "barbodproo@gmail.com",
+      "password": "e43ab55787de53002e96ddf4d38f610244c2ef658997f24f9dc7621238a3af75",
+      "createdAt": "2026-05-07T11:57:08.662Z"
+    },
+    {
+      "id": "01aab7f5-87fa-4008-9f25-5ea289b14c07",
+      "name": "barbod2",
+      "email": "barbodpro@gmail.com",
+      "password": "9fc84982cdeed66c703e460f806b14c11a9d4b2430a8d63693172e9621cfbf3c",
+      "createdAt": "2026-05-07T12:06:23.211Z"
+    }
+  ],
+  "sessions": {
+    "b503c73c4267ea70d4df8d386f85487b0cc835af93e9eb7f": "17f7ab46-9709-4b4d-b5f6-d2aef0c087c1",
+    "d1f4ed04e7860efae5e55c0a805650d3db6d57142f4a3d99": "17f7ab46-9709-4b4d-b5f6-d2aef0c087c1",
+    "0dc20033a6e9e3da8671a36b6fe481442be25caea260e4b4": "01aab7f5-87fa-4008-9f25-5ea289b14c07",
+    "8cdd8357f87a3d337677974c819b3e98d44c0dd58899c8f3": "17f7ab46-9709-4b4d-b5f6-d2aef0c087c1"
+  },
+  "messages": {
+    "dm-01aab7f5-87fa-4008-9f25-5ea289b14c07-17f7ab46-9709-4b4d-b5f6-d2aef0c087c1": [
+      {
+        "id": "8fb35e5d-3f74-44dd-99ff-89ab137703c3",
+        "chat": "dm-01aab7f5-87fa-4008-9f25-5ea289b14c07-17f7ab46-9709-4b4d-b5f6-d2aef0c087c1",
+        "authorId": "17f7ab46-9709-4b4d-b5f6-d2aef0c087c1",
+        "author": "barbod",
+        "text": "salam",
+        "createdAt": "2026-05-07T12:23:17.643Z"
+      },
+      {
+        "id": "95149aa8-729c-452d-9d6a-24305801fceb",
+        "chat": "dm-01aab7f5-87fa-4008-9f25-5ea289b14c07-17f7ab46-9709-4b4d-b5f6-d2aef0c087c1",
+        "authorId": "01aab7f5-87fa-4008-9f25-5ea289b14c07",
+        "author": "barbod2",
+        "text": "salam",
+        "createdAt": "2026-05-07T12:23:28.613Z"
+      },
+      {
+        "id": "ab566dd9-cbcd-4028-8955-60f8acdbffc0",
+        "chat": "dm-01aab7f5-87fa-4008-9f25-5ea289b14c07-17f7ab46-9709-4b4d-b5f6-d2aef0c087c1",
+        "authorId": "01aab7f5-87fa-4008-9f25-5ea289b14c07",
+        "author": "barbod2",
+        "text": "d",
+        "createdAt": "2026-05-07T12:23:39.141Z"
+      },
+      {
+        "id": "cbd8a699-dd6b-43da-906f-6e2fda37ec28",
+        "chat": "dm-01aab7f5-87fa-4008-9f25-5ea289b14c07-17f7ab46-9709-4b4d-b5f6-d2aef0c087c1",
+        "authorId": "17f7ab46-9709-4b4d-b5f6-d2aef0c087c1",
+        "author": "barbod",
+        "text": "f",
+        "createdAt": "2026-05-07T12:23:47.994Z"
+      },
+      {
+        "id": "b8c3cb21-94c5-4a44-9a36-45cd253e5359",
+        "chat": "dm-01aab7f5-87fa-4008-9f25-5ea289b14c07-17f7ab46-9709-4b4d-b5f6-d2aef0c087c1",
+        "authorId": "17f7ab46-9709-4b4d-b5f6-d2aef0c087c1",
+        "author": "barbod",
+        "text": "s",
+        "createdAt": "2026-05-07T12:24:50.885Z"
+      },
+      {
+        "id": "b9cb1aac-05de-4942-8732-1def58000b79",
+        "chat": "dm-01aab7f5-87fa-4008-9f25-5ea289b14c07-17f7ab46-9709-4b4d-b5f6-d2aef0c087c1",
+        "authorId": "01aab7f5-87fa-4008-9f25-5ea289b14c07",
+        "author": "barbod2",
+        "text": "x",
+        "createdAt": "2026-05-07T12:24:59.643Z"
+      }
+    ]
+  },
+  "chats": [
+    {
+      "id": "dm-01aab7f5-87fa-4008-9f25-5ea289b14c07-17f7ab46-9709-4b4d-b5f6-d2aef0c087c1",
+      "name": "barbod2",
+      "type": "friend",
+      "avatar": "../assets/media/avatar/3.png",
+      "members": [
+        "01aab7f5-87fa-4008-9f25-5ea289b14c07",
+        "17f7ab46-9709-4b4d-b5f6-d2aef0c087c1"
+      ]
+    }
+  ]
+}
